@@ -65,7 +65,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES['dafault'] = dj_database_url.config()
+DATABASE['dafault'] = dj_database_url.config()
 
 
 # Password validation

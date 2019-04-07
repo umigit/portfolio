@@ -3,7 +3,7 @@ import dj_database_url
 import environ
 
 env = environ.Env(DEBUG=(bool, False),) # set default values and casting
-environ.Env.read_env('.env') # reading .env file
+environ.Env.read_env() # reading .env file
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -117,8 +117,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
+if DEBUG:
+    STATIC_URL = '/static/'
+else:
+    STATIC_URL = 'https://umi-portfolio.s3-ap-northeast-1.amazonaws.com/'
 
-STATIC_URL = 'https://umi-portfolio.s3-ap-northeast-1.amazonaws.com/'
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 AWS_STORAGE_BUCKET_NAME = 'umi-portfolio'
 AWS_PRELOAD_METADATA = True

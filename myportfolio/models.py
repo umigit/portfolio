@@ -6,6 +6,7 @@ class Work(models.Model):
     url = models.URLField(default="")
     github_front = models.URLField(default="")
     github_back = models.URLField(default="")
+    image = models.ImageField(null=True, upload_to='image/%Y%m%d')
 
 class Skill(models.Model):
     name = models.CharField(max_length=32)

@@ -4,7 +4,7 @@ from .models import Work, Skill, Link
 class WorkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Work
-        fields = ('name', 'detail', 'url', 'github_front', 'github_back')
+        fields = ('name', 'detail', 'url', 'github_front', 'github_back', 'image')
 
 class SkillSerializer(serializers.ModelSerializer):
     class Meta:

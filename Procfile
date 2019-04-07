@@ -1,1 +1,1 @@
-web: gunicorn portfolio.wsgi
+web: gunicorn umi-portfolio-api.wsgi

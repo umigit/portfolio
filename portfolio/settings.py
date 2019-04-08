@@ -47,6 +47,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -124,6 +125,7 @@ else:
     STATIC_URL = 'https://umi-portfolio.s3-ap-northeast-1.amazonaws.com/'
 
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 AWS_STORAGE_BUCKET_NAME = 'umi-portfolio'
 AWS_PRELOAD_METADATA = True
 AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')

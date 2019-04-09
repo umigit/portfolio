@@ -130,6 +130,7 @@ AWS_STORAGE_BUCKET_NAME = 'umi-portfolio'
 AWS_PRELOAD_METADATA = True
 AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+AWS_S3_CUSTOM_DOMAIN = 'd1s76aw8jgvjd5.cloudfront.net'
 
 try:
     from .local_settings import *

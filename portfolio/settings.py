@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'storages',
-     'collectfast',
+    'collectfast',
 ]
 
 MIDDLEWARE = [
